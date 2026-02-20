@@ -1,4 +1,3 @@
-```markdown
 # Community Detection in Social Networks: A Comparative Study
 
 ## 📌 Overview
@@ -12,43 +11,43 @@ By combining centrality analysis and community detection methods, the project un
 ## 📁 Project Structure
 
 ```
-
 ├── README.md
 ├── facebook_combined.txt
 ├── community_detection.ipynb
 ├── images/
 ├── requirements.txt
 └── src/
-
-````
+```
 
 ---
 
 ## 🧠 Objectives
 
-- Load and analyze a real-world social network graph  
-- Compute key centrality measures:
-  - Degree
-  - Betweenness
-  - Closeness
-  - Eigenvector
-  - PageRank  
-- Apply community detection algorithms:
-  - Louvain  
-  - Label Propagation  
-  - Girvan–Newman  
-- Visualize and compare detected communities  
-- Analyze the structural role of important nodes  
+* Load and analyze a real-world social network graph
+* Compute key centrality measures:
+
+  * Degree
+  * Betweenness
+  * Closeness
+  * Eigenvector
+  * PageRank
+* Apply community detection algorithms:
+
+  * Louvain
+  * Label Propagation
+  * Girvan–Newman
+* Visualize and compare detected communities
+* Analyze the structural role of important nodes
 
 ---
 
 ## 📊 Dataset
 
-- **Source:** Stanford SNAP – Facebook Ego Network  
-- **Type:** Undirected edge list  
-- **Nodes:** 4,039  
-- **Edges:** 88,234  
-- **Density:** ~0.0108  
+* **Source:** Stanford SNAP – Facebook Ego Network
+* **Type:** Undirected edge list
+* **Nodes:** 4,039
+* **Edges:** 88,234
+* **Density:** ~0.0108
 
 The dataset is loaded directly using `NetworkX` without additional preprocessing.
 
@@ -56,21 +55,21 @@ The dataset is loaded directly using `NetworkX` without additional preprocessing
 
 ## ⚙️ Installation
 
-### 1. Clone the repository
+### 1️⃣ Clone the repository
 
 ```bash
 git clone https://github.com/your-username/community-detection-facebook.git
 cd community-detection-facebook
-````
+```
 
-### 2. (Optional) Create a virtual environment
+### 2️⃣ (Optional) Create a virtual environment
 
 ```bash
 python -m venv venv
 source venv/bin/activate   # Windows: .\venv\Scripts\activate
 ```
 
-### 3. Install dependencies
+### 3️⃣ Install dependencies
 
 ```bash
 pip install -r requirements.txt
@@ -153,5 +152,4 @@ This project demonstrates how graph mining techniques reveal hidden structures i
 * Blondel et al. (2008) – Louvain Method
 * Girvan & Newman (2002) – Community Structure in Networks
 
-```
-```
+---
