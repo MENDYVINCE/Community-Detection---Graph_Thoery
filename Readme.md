@@ -16,7 +16,6 @@ By combining centrality analysis and community detection methods, the project un
 ├── community_detection.ipynb
 ├── images/
 ├── requirements.txt
-└── src/
 ```
 
 ---
