@@ -1,155 +1,157 @@
+```markdown
 # Community Detection in Social Networks: A Comparative Study
 
 ## 📌 Overview
 
-This project focuses on **community detection** in social networks using various graph mining algorithms. The primary goal is to compare the performance and results of different community detection techniques on a real-world social graph—the **Facebook combined ego-network dataset** from Stanford SNAP.
+This project explores **community detection in social networks** using graph mining algorithms. The objective is to compare multiple community detection techniques on a real-world dataset: the Facebook combined ego-network dataset from Stanford SNAP.
 
-By analyzing centrality measures and applying community detection algorithms, this project aims to uncover the underlying structure of the network, identify key influencers, and evaluate how different algorithms partition the graph into meaningful communities.
+By combining centrality analysis and community detection methods, the project uncovers the structural organization of the network, identifies influential nodes, and evaluates how different algorithms partition the graph into meaningful communities.
 
 ---
 
 ## 📁 Project Structure
 
-├── README.md # Project documentation
-├── facebook_combined.txt # Dataset (edge list)
-├── community_detection.ipynb # Main Jupyter notebook
-├── images/ # Saved visualizations
-├── requirements.txt # Python dependencies
-└── src/ # (Optional) Python scripts
-text
+```
 
+├── README.md
+├── facebook_combined.txt
+├── community_detection.ipynb
+├── images/
+├── requirements.txt
+└── src/
 
+````
+
+---
 
 ## 🧠 Objectives
 
-- Load and preprocess a real-world social network graph
-- Compute and interpret various **centrality measures**:
-  - Degree Centrality
-  - Betweenness Centrality
-  - Closeness Centrality
-  - Eigenvector Centrality
-  - PageRank
-- Apply **community detection algorithms**:
-  - Louvain
-  - Label Propagation
-  - Girvan-Newman
-- Visualize communities and compare results
-- Analyze the role of important nodes in the network structure
+- Load and analyze a real-world social network graph  
+- Compute key centrality measures:
+  - Degree
+  - Betweenness
+  - Closeness
+  - Eigenvector
+  - PageRank  
+- Apply community detection algorithms:
+  - Louvain  
+  - Label Propagation  
+  - Girvan–Newman  
+- Visualize and compare detected communities  
+- Analyze the structural role of important nodes  
 
 ---
 
 ## 📊 Dataset
 
-- **Source**: [Stanford SNAP](https://snap.stanford.edu/data/ego-Facebook.html)
-- **Description**: A combined ego-network of 10 Facebook circles
-- **Format**: Edge list (undirected)
-- **Statistics**:
-  - Nodes: 4,039
-  - Edges: 88,234
-  - Density: ~0.0108
+- **Source:** Stanford SNAP – Facebook Ego Network  
+- **Type:** Undirected edge list  
+- **Nodes:** 4,039  
+- **Edges:** 88,234  
+- **Density:** ~0.0108  
 
-The dataset was downloaded, decompressed, and loaded using `NetworkX` with no additional preprocessing required.
+The dataset is loaded directly using `NetworkX` without additional preprocessing.
 
+---
 
-
-## ⚙️ Installation & Requirements
+## ⚙️ Installation
 
 ### 1. Clone the repository
+
 ```bash
 git clone https://github.com/your-username/community-detection-facebook.git
 cd community-detection-facebook
+````
 
-2. Create a virtual environment (optional but recommended)
-bash
+### 2. (Optional) Create a virtual environment
 
+```bash
 python -m venv venv
-source venv/bin/activate  # On Windows: .\venv\Scripts\activate
+source venv/bin/activate   # Windows: .\venv\Scripts\activate
+```
 
-3. Install dependencies
-bash
+### 3. Install dependencies
 
+```bash
 pip install -r requirements.txt
+```
 
-📦 requirements.txt
-text
+### 📦 Requirements
 
+```
 networkx
 matplotlib
 python-louvain
 pandas
 jupyter
+```
 
-🚀 How to Run
+---
 
-    Open the Jupyter notebook:
-    bash
+## 🚀 Usage
 
-    jupyter notebook community_detection.ipynb
+```bash
+jupyter notebook community_detection.ipynb
+```
 
-    Run all cells sequentially:
+Run the notebook cells sequentially to:
 
-        Download and load the dataset
+* Load the dataset
+* Compute centrality metrics
+* Visualize influential nodes
+* Apply community detection algorithms
+* Compare and interpret results
 
-        Compute centrality measures
+---
 
-        Visualize top nodes
+## 🧪 Methods
 
-        Apply community detection algorithms
+### 📈 Centrality Measures
 
-        Compare and interpret results
+| Measure     | Purpose                           |
+| ----------- | --------------------------------- |
+| Degree      | Direct connections                |
+| Betweenness | Bridge importance                 |
+| Closeness   | Average distance to others        |
+| Eigenvector | Influence via important neighbors |
+| PageRank    | Link-based importance score       |
 
-🧪 Methods Used
-📈 Centrality Measures
-Measure	Description
-Degree	Number of direct connections
-Betweenness	Frequency of a node lying on shortest paths between others
-Closeness	Inverse of average distance to all other nodes
-Eigenvector	Influence based on neighbors' importance
-PageRank	Google's algorithm ranking nodes by link importance
-🧩 Community Detection Algorithms
-Algorithm	Type	Description
-Louvain	Modularity-based	Optimizes community structure by maximizing modularity
-Label Propagation	Diffusion-based	Nodes adopt the majority label of their neighbors
-Girvan-Newman	Divisive	Removes edges with high betweenness to split communities
-📸 Visualizations
-Example: Top 20 Nodes by Degree Centrality
+### 🧩 Community Detection
 
-https://images/degree_centrality.png
-Example: Community Detection with Louvain
+| Algorithm         | Type             | Description                    |
+| ----------------- | ---------------- | ------------------------------ |
+| Louvain           | Modularity-based | Maximizes modularity           |
+| Label Propagation | Diffusion-based  | Neighbor majority labeling     |
+| Girvan–Newman     | Divisive         | Removes high-betweenness edges |
 
-https://images/louvain_communities.png
+---
 
-    All visualizations are saved in the /images folder.
+## 📌 Key Findings
 
-📌 Results & Observations
+* Central nodes are consistently identified across multiple metrics
+* Louvain produces well-balanced communities and scales efficiently
+* Label Propagation is fast but less stable across runs
+* Girvan–Newman provides hierarchical insight but is computationally expensive
+* High betweenness nodes often act as bridges between communities
 
-    The top 10 most central nodes are consistently identified across multiple centrality measures.
+---
 
-    Louvain produces well-balanced communities and runs efficiently on large graphs.
+## 🧠 Conclusion
 
-    Label Propagation is extremely fast but less stable across runs.
+This project demonstrates how graph mining techniques reveal hidden structures in social networks. By combining centrality analysis with community detection, we gain insights into:
 
-    Girvan-Newman provides a hierarchical view but is computationally expensive.
+* Influential users
+* Community organization
+* Algorithm performance trade-offs
 
-    Nodes with high betweenness centrality often act as bridges between communities.
+---
 
-🧠 Conclusion
+## 📚 References
 
-This project demonstrates how graph mining techniques can reveal hidden structures in social networks. By combining centrality analysis with community detection, we gain insights into:
+* Stanford SNAP – Facebook Dataset
+* NetworkX Documentation
+* Blondel et al. (2008) – Louvain Method
+* Girvan & Newman (2002) – Community Structure in Networks
 
-    Who the key players are
-
-    How communities are organized
-
-    Which algorithms are best suited for different types of network analysis
-
-📚 References
-
-    Stanford SNAP: Facebook Dataset
-
-    NetworkX Documentation: https://networkx.org/
-
-    Louvain Method: Blondel et al. (2008)
-
-    Girvan-Newman Algorithm: Girvan & Newman (2002)
-
+```
+```
